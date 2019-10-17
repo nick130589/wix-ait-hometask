@@ -1,0 +1,57 @@
+<settings>
+
+    <mirrors>
+        <mirror>
+            <id>artifactory</id>
+            <mirrorOf>*</mirrorOf>
+            <url>https://anadarko.jfrog.io/anadarko/maven-public/</url>
+        </mirror>
+    </mirrors>
+
+    <profiles>
+        <profile>
+            <id>artifactory</id>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>http://central</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <url>http://central</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+            <properties>
+                <repo.releases.url>https://anadarko.jfrog.io/anadarko/releases/</repo.releases.url>
+                <repo.snapshots.url>https://anadarko.jfrog.io/anadarko/snapshots/</repo.snapshots.url>
+            </properties>
+        </profile>
+    </profiles>
+
+    <servers>
+        <server>
+            <id>artifactory</id>
+            <username>maven-public</username>
+            <password>apc4rt1f4ct0ry</password>
+        </server>
+    </servers>
+
+    <activeProfiles>
+        <activeProfile>artifactory</activeProfile>
+    </activeProfiles>
+
+</settings>
