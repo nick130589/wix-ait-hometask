@@ -15,9 +15,16 @@
  */
 package work.rustam.common.utils.helpers;
 
-public class Random {
+import java.util.concurrent.ThreadLocalRandom;
+
+public class RandomUtils {
     public static String getRandomString()
     {
         return  Long.toHexString(Double.doubleToLongBits(Math.random()));
+    }
+
+    public static String getRandomNumber()
+    {
+        return  Long.toHexString(ThreadLocalRandom.current().nextLong(0, 32767));
     }
 }

@@ -15,6 +15,8 @@
  */
 package wix_tests.stepsDef;
 
+import work.rustam.common.services.ui.pages.GoogleResultsPage;
+import work.rustam.common.services.ui.pages.GoogleStartPage;
 import work.rustam.common.services.ui.pages.LoginPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -32,5 +34,13 @@ public class AbstractStepsDef {
 	@Autowired
 	@Lazy
 	public LoginPage loginPage;
+
+	@Autowired
+	@Lazy
+	public GoogleStartPage googleStartPage;
+
+	@Autowired
+	@Lazy
+	public GoogleResultsPage googleResultsPage;
 
 }

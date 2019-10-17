@@ -26,7 +26,6 @@ import uk.org.lidalia.sysoutslf4j.context.SysOutOverSLF4J;
 @ComponentScan("work.rustam.common.services")
 @PropertySources({
         @PropertySource("classpath:properties/env/${app_env}.properties"),
-        @PropertySource("classpath:properties/endpoint/${app_env}-endpoint.properties"),
         @PropertySource("classpath:properties/common/webdrivermanager.properties"),
 })
 public class AppConfig {

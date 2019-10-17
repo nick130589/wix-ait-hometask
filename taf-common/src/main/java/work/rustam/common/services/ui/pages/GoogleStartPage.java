@@ -15,30 +15,16 @@
  */
 package work.rustam.common.services.ui.pages;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
+
+import org.openqa.selenium.By;
 import org.springframework.stereotype.Service;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Selenide.*;
 
 @Service
-public class LoginPage {
-	public void login(String baseUrl, String email, String password)
-	{
-		Selenide.open(baseUrl);
-
-
-		$x("//span/ancestor::button").waitUntil(Condition.visible,5000).click();
-
-		$("#signUpDialogswitchToEmailLink").click();
-
-
-		$("#signUpDialogemailInputinput").sendKeys(email);
-		$("#signUpDialogpasswordInputinput").sendKeys(password);
-
-		$("#signUpDialogokButton").click();
-		sleep(5000);
+public class GoogleStartPage{
+	public GoogleResultsPage search(String query) {
+		$(By.name("q")).setValue(query).pressEnter();
+		return page(GoogleResultsPage.class);
 	}
 }

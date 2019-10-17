@@ -15,20 +15,26 @@
  */
 package wix_tests.stepsDef;
 
+import org.springframework.beans.factory.annotation.Value;
 
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.And;
-
-import static com.codeborne.selenide.Selenide.sleep;
-
-public class CommonStepsDef extends AbstractStepsDef {
-
-//	@Autowired
-//	private PnaService pnaService;
+import work.rustam.common.utils.helpers.RandomUtils;
 
 
-    @And("I wait {int} seconds")
-    public void iWaitSeconds(int sec) {
-		sleep(sec*1000);
-    }
+public class WixLoginPageStepDef extends AbstractStepsDef {
+
+	@Value("${ui.baseUrl}")
+	String baseUrl;
+
+	@Value("${email}")
+	String email;
+
+	@Value("${password}")
+	String password;
+
+	@Given("^User open Wix Login page$")
+	public void openHomePage() {
+		loginPage.login(baseUrl, String.format(email, RandomUtils.getRandomNumber()), password);
+	}
 }
+

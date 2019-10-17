@@ -16,7 +16,7 @@ This maven project contains two submodules: common/core module of test automatio
 
 * Open a terminal or command prompt
 * Go to project's root
-* Execute `mvn clean install -P dev -D browser=ChromeHeadless`
+* Execute `mvn clean install -P dev -D browser=Chrome`
 * Supported browsers are: Chrome, ChromeHeadless, IE
 
 <a name="reports"></a>
