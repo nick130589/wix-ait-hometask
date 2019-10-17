@@ -15,10 +15,9 @@
         <compiler.plugin.version>3.8.1</compiler.plugin.version>
         <!--libs versions-->
         <assertj.version>3.9.0</assertj.version>
-        <spring.version>4.3.6.RELEASE</spring.version>
-        <spring.ws>2.4.0.RELEASE</spring.ws>
+        <spring.version>5.2.0.RELEASE</spring.version>
         <javaslang.version>2.0.6</javaslang.version>
-        <jackson.version>2.9.9</jackson.version>
+        <jackson.version>2.10.0</jackson.version>
         <apache-commons-lang.version>2.6</apache-commons-lang.version>
         <lombok.version>1.18.8</lombok.version>
         <streamex.version>0.6.8</streamex.version>
@@ -129,11 +128,6 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.ws</groupId>
-            <artifactId>spring-ws-core</artifactId>
-            <version>${spring.ws}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
