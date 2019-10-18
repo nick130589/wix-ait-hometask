@@ -16,7 +16,7 @@ This maven project contains two submodules: common/core module of test automatio
 
 * Open a terminal or command prompt
 * Go to project's root
-* Execute `mvn clean install -P dev -D browser=Chrome`
+* Execute `mvn clean install -Pdev -D browser=Chrome -D cucumber.options="--tags @wix"`
 * Supported browsers are: Chrome, ChromeHeadless, Selenoid (dockerized Chrome)
 
 <a name="reports"></a>
