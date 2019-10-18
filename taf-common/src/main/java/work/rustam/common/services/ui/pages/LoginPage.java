@@ -25,11 +25,14 @@ import static com.codeborne.selenide.Selenide.sleep;
 
 @Service
 public class LoginPage {
-	public void login(String baseUrl, String email, String password)
+
+	public void open(String baseUrl)
 	{
 		Selenide.open(baseUrl);
+	}
 
-
+	public void login(String email, String password)
+	{
 		$x("//span/ancestor::button").waitUntil(Condition.visible,5000).click();
 
 		$("#signUpDialogswitchToEmailLink").click();

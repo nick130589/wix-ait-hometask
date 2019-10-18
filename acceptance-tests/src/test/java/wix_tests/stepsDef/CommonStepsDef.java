@@ -21,7 +21,7 @@ import static com.codeborne.selenide.Selenide.sleep;
 
 public class CommonStepsDef extends AbstractStepsDef {
 
-    @And("I wait {int} seconds")
+    @And("User wait for {int} seconds")
     public void iWaitSeconds(int sec) {
 		sleep(sec*1000);
     }

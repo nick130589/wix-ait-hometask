@@ -21,6 +21,8 @@ import work.rustam.common.services.ui.pages.LoginPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
+import work.rustam.common.services.ui.pages.MembersPage;
+import work.rustam.common.services.ui.pages.ProfilePage;
 
 public class AbstractStepsDef {
 
@@ -37,10 +39,17 @@ public class AbstractStepsDef {
 
 	@Autowired
 	@Lazy
+	public ProfilePage profilePage;
+
+	@Autowired
+	@Lazy
+	public MembersPage membersPage;
+
+	@Autowired
+	@Lazy
 	public GoogleStartPage googleStartPage;
 
 	@Autowired
 	@Lazy
 	public GoogleResultsPage googleResultsPage;
-
 }
