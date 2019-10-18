@@ -31,8 +31,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static work.rustam.common.services.ui.drivers.DriverManager.initBrowser;
-import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
-import static com.codeborne.selenide.WebDriverRunner.isIE;
 
 @Slf4j
 public class CucumberHooks {
@@ -55,13 +53,6 @@ public class CucumberHooks {
         initBrowser(browser);
     }
 
-    @Before
-    public void clearIeCache() {
-        if (isIE()) {
-            clearBrowserCache();
-        }
-    }
-
     @After
     public void logCountOfTest(Scenario scenario) {
         count++;
@@ -82,7 +73,6 @@ public class CucumberHooks {
             log.info(testStatusText.getTEXT_FOR_PASSED_TEST());
         }
     }
-
 
     public void setScenarioName(Scenario scenario) {
         MDC.put("scenarioName", scenario.getName());

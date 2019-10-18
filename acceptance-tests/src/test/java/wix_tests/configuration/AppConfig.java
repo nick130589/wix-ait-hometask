@@ -17,9 +17,8 @@ package wix_tests.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
-import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
-import uk.org.lidalia.sysoutslf4j.context.SysOutOverSLF4J;
+
 
 @Configuration
 @EnableAspectJAutoProxy(proxyTargetClass = true)
@@ -31,10 +30,4 @@ import uk.org.lidalia.sysoutslf4j.context.SysOutOverSLF4J;
 public class AppConfig {
     @Autowired
     private Environment env;
-
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer PropertySourcesPlaceholderConfigurer() {
-        SysOutOverSLF4J.sendSystemOutAndErrToSLF4J();
-        return new PropertySourcesPlaceholderConfigurer();
-    }
 }
