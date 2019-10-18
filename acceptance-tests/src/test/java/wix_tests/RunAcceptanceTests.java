@@ -17,13 +17,7 @@ package wix_tests;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
-import org.junit.AfterClass;
 import org.junit.runner.RunWith;
-
-
-import static com.codeborne.selenide.Selenide.sleep;
-import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
-import static com.codeborne.selenide.WebDriverRunner.isIE;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -33,12 +27,4 @@ import static com.codeborne.selenide.WebDriverRunner.isIE;
 )
 
 public class RunAcceptanceTests {
-
-	@AfterClass
-	public static void ieRelax() {
-		if (isIE()) {
-			closeWebDriver();
-			sleep(500);
-		}
-	}
 }

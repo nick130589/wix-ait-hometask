@@ -41,7 +41,6 @@ public class GoogleSearchStepsDef extends AbstractStepsDef {
 	@Then("^Search results returned$")
 
 	public void assertResults() {
-		//googleResultsPage.results().shouldHave(size(8));
 		googleResultsPage.results().get(0).shouldHave(text("Selenide: Concise UI Tests in Java"));
 	}
 

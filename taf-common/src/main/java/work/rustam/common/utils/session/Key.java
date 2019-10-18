@@ -36,21 +36,6 @@ public class Key {
     }
 
     public enum Keys {
-
-//        QUERY_PARAMS("query_params"),
-//        QUERY_RESULT("query_results"),
-//
-//        ERROR_MESSAGE("error_message"),
-//
-//        WELL_DETAILS_RESPONSE("well_details_response"),
-//        FACILITY_LOCATION_RESPONSE("facility_location_response"),
-//        LOCATION_INFO_RESPONSE("locationInfoResponse"),
-//        FACILITY_EQUIPMENT_DB("facilityEquipmentsDB"),
-//        UPDATE_EQUIPMENT_REQUEST("updateEquipmentRequest"),
-//
-//        WELL_FOR_APPROWALS("wellForApprovals"),
-//
-//        TOKEN("token"),
         COUNT("count"),
         PASSED_TESTS("passed_tests"),
         FAILED_TESTS("failed_tests"),

@@ -15,17 +15,11 @@
  */
 package wix_tests.stepsDef;
 
-
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.And;
 
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class CommonStepsDef extends AbstractStepsDef {
-
-//	@Autowired
-//	private PnaService pnaService;
-
 
     @And("I wait {int} seconds")
     public void iWaitSeconds(int sec) {

@@ -21,9 +21,6 @@ public class DriverManager {
 
     public static void initBrowser(String browser){
         switch (browser){
-            case "IE":
-                initIE();
-                break;
             case "ChromeHeadless":
                 initHeadlessChrome();
                 break;
@@ -37,15 +34,10 @@ public class DriverManager {
         }
         Configuration.timeout = 20000;
         Configuration.startMaximized = true;
-//         Configuration.holdBrowserOpen =true;
     }
 
     private static void initHeadlessChrome(){
         Configuration.browser = "work.rustam.common.services.ui.drivers.HeadlessChromeDriver";
-    }
-
-    private static void initIE(){
-        Configuration.browser = "work.rustam.common.services.ui.drivers.IEDriver";
     }
 
     private static void initChrome(){

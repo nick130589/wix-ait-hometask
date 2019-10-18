@@ -6,16 +6,16 @@ Feature: Login. Sign up and login to application
 #    And Authorization with token is enabled
 
   @SeverityLevel.NORMAL
-  @tmsLink=DEMO1
+  @tmsLink=DEMO-1
   @ui
   @wix
-  @AC1-DEMO1
+  @AC1-DEMO-1
   Scenario: 01.01.01 Wix Login. Login with email
     Given User open Wix Login page
 
 
   @SeverityLevel.NORMAL
-  @tmsLink=DEMO1
+  @tmsLink=DEMO-1
   @ui
   @sanity
   @AC1-DEMO1
@@ -25,7 +25,7 @@ Feature: Login. Sign up and login to application
     Then Search results returned
 
   @SeverityLevel.NORMAL
-  @tmsLink=DEMO2
+  @tmsLink=DEMO-2
   @ui
   @sanity
   @AC1-DEMO2
