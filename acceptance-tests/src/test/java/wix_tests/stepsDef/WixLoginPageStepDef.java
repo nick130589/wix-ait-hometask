@@ -64,8 +64,8 @@ public class WixLoginPageStepDef extends AbstractStepsDef {
 	}
 
 	@Then("Member card with name {string} is displayed")
-	public void memberCardWithNameGeorgeIsDisplayed() {
-		assertThat(membersPage.getMembers().contains("George"));
+	public void memberCardWithNameGeorgeIsDisplayed(String name) {
+		assertThat(membersPage.getMembers().contains(name));
 	}
 
 	@Then("Profile of user {string} is displayed")
