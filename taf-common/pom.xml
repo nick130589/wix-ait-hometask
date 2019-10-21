@@ -41,18 +41,13 @@
             <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-tx</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <!--Jackson-->
         <!--Lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
         </dependency>
+        <!--Selenide-->
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
