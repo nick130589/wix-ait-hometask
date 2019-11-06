@@ -16,8 +16,11 @@ This maven module contains e2e acceptance tests
 
 * Open a terminal or command prompt
 * Go to project's root
-* Execute `mvn clean install -Pdev -D browser=Chrome -D cucumber.options="--tags @wix"`
+* Execute `mvn clean install -Pdev -D browser=Chrome -D cucumber.options="--tags @api"` for API tests
+* Execute `mvn clean install -Pdev -D browser=Chrome -D cucumber.options="--tags @ui"` for UI tests
+* Execute `mvn clean install -Pdev -D browser=Chrome` for all suites tests
 * Supported browsers are: Chrome, ChromeHeadless, Selenoid (dockerized Chrome)
+* In order to run tests in parallel mode set dataproviderthreadcount to value > 1 for maven-failsafe-plugin properties in pom.xml
 
 <a name="reports"></a>
 ### Reports  

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>work.rustam</groupId>
-    <artifactId>wix_taf</artifactId>
+    <artifactId>skeleton_taf</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <modules>

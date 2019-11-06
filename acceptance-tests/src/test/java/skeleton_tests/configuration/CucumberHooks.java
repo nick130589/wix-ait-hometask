@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package wix_tests.configuration;
+package skeleton_tests.configuration;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import work.rustam.common.utils.TestStatusText;

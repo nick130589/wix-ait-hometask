@@ -13,37 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package wix_tests.stepsDef;
+package skeleton_tests.stepsDef;
 
+import work.rustam.common.services.api.RestClient;
 import work.rustam.common.services.ui.pages.GoogleResultsPage;
 import work.rustam.common.services.ui.pages.GoogleStartPage;
-import work.rustam.common.services.ui.pages.LoginPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
-import work.rustam.common.services.ui.pages.MembersPage;
-import work.rustam.common.services.ui.pages.ProfilePage;
 
 public class AbstractStepsDef {
 
+	@Autowired
+	@Lazy
+	public RestClient restService;
 
 	@Value("${ui.baseUrl}")
 	String baseUrl;
 
-	@Value("${env.name}")
-	public String environment;
-
-	@Autowired
-	@Lazy
-	public LoginPage loginPage;
-
-	@Autowired
-	@Lazy
-	public ProfilePage profilePage;
-
-	@Autowired
-	@Lazy
-	public MembersPage membersPage;
+	@Value("${reqres.path.baseUrl}")
+	String BaseEndpoint;
 
 	@Autowired
 	@Lazy

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package wix_tests.stepsDef;
+package skeleton_tests.stepsDef;
 
 import com.codeborne.selenide.Selenide;
 import work.rustam.common.services.ui.pages.GoogleStartPage;
@@ -30,7 +30,7 @@ public class GoogleSearchStepsDef extends AbstractStepsDef {
 
 	@Given("^I open Google Page$")
 	public void openHomePage() {
-		googleStartPage = Selenide.open("https://www.google.co.uk", GoogleStartPage.class);
+		googleStartPage = Selenide.open(baseUrl, GoogleStartPage.class);
 	}
 
 	@When("^Enter search query into text input$")
@@ -41,11 +41,13 @@ public class GoogleSearchStepsDef extends AbstractStepsDef {
 	@Then("^Search results returned$")
 
 	public void assertResults() {
-		googleResultsPage.results().get(0).shouldHave(text("Selenide: Concise UI Tests in Java"));
+		googleResultsPage.results().get(0).shouldHave(text("Selenide:"));
 	}
 
 	@Then("^Verify that footer contains elements:$")
 	public void verifyThatFooterContainsElements(List<String> footerElementsNames) {
 		googleResultsPage.navigationLabels().shouldHave(texts(footerElementsNames));
 	}
+
+
 }

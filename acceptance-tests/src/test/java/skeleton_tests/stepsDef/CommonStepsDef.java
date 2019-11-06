@@ -13,18 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package wix_tests.configuration;
+package skeleton_tests.stepsDef;
 
-import cucumber.api.java.Before;
-import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.ContextConfiguration;
+import cucumber.api.java.en.And;
 
-@ContextConfiguration(classes = {AppConfig.class})
-@DirtiesContext
-public class CucumberContextConfiguration {
+import static com.codeborne.selenide.Selenide.sleep;
 
-	@Before
-	public void setup_cucumber_spring_context() {
+public class CommonStepsDef extends AbstractStepsDef {
 
-	}
+    @And("User wait for {int} seconds")
+    public void iWaitSeconds(int sec) {
+		sleep(sec*1000);
+    }
+
+    @And("The status code is {int}")
+    public void theStatusCodeIs(int arg0) {
+    }
 }

@@ -13,8 +13,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <compiler.plugin.version>3.8.1</compiler.plugin.version>
-        <!--libs versions-->
-        <junit.version>5.5.0</junit.version>
         <cucumber.version>4.3.1</cucumber.version>
         <spring.version>5.2.0.RELEASE</spring.version>
         <assertj.version>3.9.0</assertj.version>
@@ -26,6 +24,7 @@
         <maven.resources.version>3.1.0</maven.resources.version>
         <maven.failsafe.version>2.22.2</maven.failsafe.version>
         <jackson.version>2.10.0</jackson.version>
+        <sysout-over-slf4j.version>1.0.2</sysout-over-slf4j.version>
 
         <run.classes>**/RunAcceptanceTests.class</run.classes>
     </properties>
@@ -58,13 +57,17 @@
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
         </dependency>
-        <!--Junit-->
-        <!-- https://mvnrepository.com/artifact/org.junit.vintage/junit-vintage-engine -->
         <dependency>
-            <groupId>org.junit.vintage</groupId>
-            <artifactId>junit-vintage-engine</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
+            <groupId>uk.org.lidalia</groupId>
+            <artifactId>sysout-over-slf4j</artifactId>
+            <version>${sysout-over-slf4j.version}</version>
+        </dependency>
+        <!--TestNG-->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
         </dependency>
         <!--Spring-->
         <dependency>
@@ -183,8 +186,8 @@
                     </argLine>
                     <properties>
                         <property>
-                            <name>listener</name>
-                            <value>io.qameta.allure.junit4.AllureJunit4</value>
+                            <name>dataproviderthreadcount</name>
+                            <value>1</value>
                         </property>
                     </properties>
                     <includes>

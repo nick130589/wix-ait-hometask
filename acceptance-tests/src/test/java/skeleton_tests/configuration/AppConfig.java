@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package wix_tests.configuration;
+package skeleton_tests.configuration;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
-import org.springframework.core.env.Environment;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
+import uk.org.lidalia.sysoutslf4j.context.SysOutOverSLF4J;
 
 
 @Configuration
@@ -25,9 +25,14 @@ import org.springframework.core.env.Environment;
 @ComponentScan("work.rustam.common.services")
 @PropertySources({
         @PropertySource("classpath:properties/env/${app_env}.properties"),
+        @PropertySource("classpath:properties/endpoint/${app_env}-endpoint.properties"),
         @PropertySource("classpath:properties/common/webdrivermanager.properties"),
 })
 public class AppConfig {
-    @Autowired
-    private Environment env;
+
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer PropertySourcesPlaceholderConfigurer() {
+        SysOutOverSLF4J.sendSystemOutAndErrToSLF4J();
+        return new PropertySourcesPlaceholderConfigurer();
+    }
 }
